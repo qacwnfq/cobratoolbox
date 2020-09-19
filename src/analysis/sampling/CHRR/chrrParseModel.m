@@ -47,7 +47,7 @@ if isfield(model,'C') && isfield(model,'d')
           % convert constraint to <=
           model.C(i,:) = model.C(i,:)*-1;
           model.d(i) = model.d(i)*-1;
-      elseif model.dsense{i}=='E'
+      elseif model.dsense(i)=='E'
           error('Equality constraints not supported in C,d fields.');
       end
    end
